@@ -68,6 +68,9 @@ export default function Dispatch2() {
     let currentQuantity = totQuantity - (rmk + rmd + rmkcet);
     if(currentQuantity<0){
       window.alert("Item Quantity exceeded max limit")
+      let x =document.getElementById(id+' '+place);
+      currentQuantity+=parseFloat(x.value);
+      x.value=0;
     }
 
     currQuantity.value = currentQuantity;
